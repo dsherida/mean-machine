@@ -42,8 +42,14 @@
                     <td>{{ computer.nerdness }}</td>
                 </tr>
             </tbody>
+        </table>
+        <form class="form-inline" ng-submit="main.addComputer()">
+            <input type="text" name="form-control" placeholder="Macbook" ng-model="main.computerData.name">
+            <input type="text" name="form-control" placeholder="Silver" ng-model="main.computerData.color">
+            <input type="number" name="form-control" placeholder="8" ng-model="main.computerData.nerdness">
+            <button type="submit" class="btn btn-success">Add</button>
+        </form>
     </div>
-    </table>
 </body>
 
 </html>

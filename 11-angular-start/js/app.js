@@ -10,7 +10,7 @@ angular.module('firstApp', [])
     // this lets them be available to our views
 
     // define a basic variable
-    vm.message = 'Hey there! Come and see how good I look!!';
+    vm.message = 'Hey there! Come and see how good I look!';
 
     // define a list of items
     vm.computers = [
@@ -28,7 +28,9 @@ angular.module('firstApp', [])
             color: vm.computerData.color,
             nerdness: vm.computerData.nerdness
         });
-    }
+
+        vm.computerData = {};
+    };
 
 
 });
