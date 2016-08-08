@@ -1,18 +1,14 @@
-var config = require('../../config.js');
-
-var express = require('express');
-var app = express();
-
 var bodyParser = require('body-parser'); // get body-parser
 var jwt = require('jsonwebtoken');
-
 var User = require('../models/user');
+var config = require('../../config.js');
 
-var superSecret = config.superSecret;
+var superSecret = config.secret;
 
-var apiRouter = express.Router();
 
 module.exports = function(app, express) {
+
+    var apiRouter = express.Router();
 
     // route to authenticate a user (POST http://localhost:8080/api/authenticate)
     apiRouter.post('/authenticate', function(req, res) {

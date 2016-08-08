@@ -1,0 +1,28 @@
+<div class="row col-sm-6 col-sm-offset-3">
+    <div class="jumbotron">
+        <h1>Login</h1>
+        <form ng-submit="login.doLogin()">
+            <!-- Username Input -->
+            <div class="form-group">
+                <label>Username</label>
+                <input style="display:none" type="text" name="fakeusernameremembered">
+                <input type="text" class="form-control" ng-model="login.loginData.username">
+            </div>
+            <!-- Password Input -->
+            <div class="form-group">
+                <label>Password</label>
+                <input style="display:none" type="text" name="fakepasswordremembered">
+                <input type="password" class="form-control" ng-model="login.loginData.password">
+            </div>
+            <!-- Error -->
+            <div class="alert alert-danger" ng-if="login.error">
+                {{ login.error }}
+            </div>
+            <!-- Login Button -->
+            <button type="submit" class="btn btn-block btn-primary">
+                <span ng-if="!login.processing">Login</span>
+                <span ng-if="login.processing" class="spinner"><span class="glyphicon glyphicon-repeat"></span></span>
+            </button>
+        </form>
+    </div>
+</div>
