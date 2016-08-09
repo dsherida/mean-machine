@@ -12,7 +12,7 @@ angular.module('userService', [])
     };
 
     userFactory.create = function(userData) {
-        return $http.post('/api/users/' + userData);
+        return $http.post('/api/users/', userData);
     };
 
     userFactory.update = function(id, userData) {
